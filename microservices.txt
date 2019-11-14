@@ -1,0 +1,14 @@
+				MicroServices
+				************
+1.*** What is microservice ? What are the advantages of microservice?
+2.*** What are the challenges in microservices?
+3.*** Explain about micro service architecture?
+4.*** How can you make a communication between microservices?
+5.*** What is Service Registry in microservices ? What is the need of it?
+6.*** How can you secure your microservice?
+7.*** What are the microservice design patterns you followed?
+8.*** How can we debug or trace the microservice requests?
+9.*** How can we perform error handling or fault tolarence responses in microservices?
+10.*** How can we achive configuration management in microservices?
+
+	

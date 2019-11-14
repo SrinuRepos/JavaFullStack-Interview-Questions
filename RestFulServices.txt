@@ -1,0 +1,41 @@
+				RESTFul Services ?
+				****************
+
+1.** What is the diff b/w Restful & SOAP Services ?
+
+2.How can we implement Restful Services with SpringBoot?
+
+3.What is diff between Collection URI's and Instance Based URI ?
+
+4.*** What are the rules to follow to develop good Restful services ?
+	=> Every request has to be athenticated. Can be implemented through API gateways.
+	=> Service Exchange between consumer and producer should happen only thorugh json.
+	=> Every request has to be differentiated with Http Methods.
+	=> Define proper Collection based & Instance based Resource URI's.
+	=> Every response from the producer should include valid Http Response Code.
+	=> Good Restful service should implement HATEOAS .
+	nextResources : {
+			getById : http://localhost:8099/employees/1242/
+			getEmpRoles: http://localhost:8099/employees/1242/roles
+		   	}
+	HATEOAS is a next level rest api , where we include the next rest uris related to the resource with the in the response.So that the consumer should not refer any external documents to know about the api.
+	=> To the consumer Service Definition should be exposed through swagger ui.
+	
+5.*** What is the diff between PUT and POST methods ?
+
+6.*** Can we use @PutMapping for saving record ? No
+
+7.*** What is PatchMapping? how can we implement?
+
+6. *** What is Service Agregation ?
+	
+	Assume for a perticular request multiple restful services has to be invoked and  the response to be customized from multiple restful services.
+	At this perticuler case we expose common rest uri to the consumer, when cosumer makes a call which can invoke diff restful services , finally we agregate the response from different restful services then forward the agregated results to the consumer.This process is called Service Agregation.
+
+	=> In Plain Restful environment the ServiceAgregation can be possible through RestTemplate.
+	=> In a MicroService environment the ServiceAgregation can be possible through FeignClient.
+
+
+
+	
+	
