@@ -1,0 +1,59 @@
+					Spring & Spring Boot		
+
+1.What is the default scope of a SpringBean?
+2.What is dependency injection? What is the diff between setter and constructor injection?
+3.How can we configure init() and destroy() methods?
+4.Explain Spring Bean Lifecycle?
+5.@Autowired performs dependency injection with byType? How to different bean if more than two beans are there with the same type? 
+	Ans: @Qualifier annotation.
+6.What is inner bean? How it works?
+7.What are the annotations used in Spring?
+8.How to read data from properties file? <conetext:property-placeholder location="fileloc" />
+9.How to enable annotation support in spring? <context:component-scan base-package=".." />
+10. What is SpringContianer used ? : ApplicationContext, WebApplicationContext
+
+11.What is use of JdbcTemplate?
+12.How to use RowMapper?
+13.How can you perform tranction management? @Transactional 
+14.What are the overloaded methods used in JdbcTemplate?
+		1.overloaded update(..) methods for non-selection
+		2. overloaded query(..) methods for  selection.
+
+15.How to integrate Hibernate with Spring?
+16. Explain Spring MVC life cycle? <refer SpringMVC annotation life cycle app>
+17. What is ModelAttribute ? what is the use of it? 
+18. How to map request with url pattrern? @RequestMapping
+19. How to perform Exception Handling in Spring MVC?'
+20. How TransactionManagement works in Spring or SpringBoot?
+
+21. What is the joinpoint & pointcut ?
+22. How to define the pointcut expression?
+23.How to implement advices in aop? @Aspect , advice annotations.
+
+	
+
+
+			SpringBoot
+1.What is the use of SpringBoot?
+2.How can we make java class as SpringBoot Application class? Ans: @SpringApplication
+3.What is the default server available in SpringBoot?
+4. How can we configure property files in SpringBoot?
+	
+	1. We will define following property files.
+		application-dev.properties
+		application-test.properties
+		application-stg.properties	
+		application-prod.properties
+	2. with in properties file key name's should be name, values should be related to environment specific information.
+
+	3.While starting springboot application we pass runtime argument as "-Dprofiles=dev/test/stg/prod" value then the springboot pick the related properties file.
+5. How do you configure DB information in SpringBoot?
+
+	
+5.What are the dependencies used in Spring Boot?
+		refer microservice pom.xml
+
+6. How do you implement ORM login in SpringBoot?
+	
+
+
