@@ -1,0 +1,18 @@
+1. What is session-level or first level cache ? 
+2. What is session-factory-leve or 2nd level cache?
+3. How to enable 2nd level cache in hibernate?
+4. Explain about persistence class object states?
+5. Rules to follow to implement Persistence class?
+6. What is dirty object ?
+7. What is diff between get(Class,Serilizable) and load(Class,Serilizable) methods ?
+8. What is synchronization in hibernate , how it works?
+9. How to work with Transaction-Management in Hinernate?
+10. What is the difference between HQL and SQL?
+11. How to work HQL in Hinbernate?
+12. Explain about one-to-many and many-to-one relation ship?
+13. Have look into to many-to-many & one-to-one relationship.
+14. What is NativeSQL? when to go for it?
+15. What is NamedQuery? how to configure in Hibernate?
+16. What is diff between persistence state & removed state?
+17. How to make SessionFactory as singleton?
+18. What is dialect? What is the use of it?
