@@ -51,3 +51,30 @@
 51. What is hashing ? what is hash collision? how to overcome it?
 52. Explain about JVM architecture?
 53. What is Garbage Collection? How it works in java?
+54. What is the contract between hascode() and equals() method?
+	The contract between equals() and hashCode() is:
+	 1) If two objects are equal, then they must have the same hash code. 
+         2) If two objects have the same hash code, they may or may not be equal. ...
+         The default implementation of hashCode() in Object class returns distinct integers for different objects.
+
+55. Why we need to override hascode() and equals() method?
+56. What is functional interface? and what is use of it?
+57. what is default method ?
+	https://www.javatpoint.com/java-default-methods
+
+58. What is streaming API? How it works?
+	=> Stream API is functional in nature.
+	=> Stream api does not store data, it just copy the resulted data from one source to another source.
+	=> Stream api does not modify the actual source(list,set,map etc).When we apply operations on source data, the stream 	   api just copies the resulted data into another source.
+	=> Stream is lazy and evaluates code only when required.
+	=>The elements of a stream are only visited once during the life of a stream. Like an Iterator, a new stream must be 	  generated to revisit the same elements of the source.
+
+59. What is the diff between abstract class and interface?
+	From java8 onwards we can declare default methods and static methods within a interface.
+	From interface the default methods can be overriden in the child classes where are static methods con't be overriden.
+	From java8 onwards interface is exposes the similar functionalities of abstract class.
+
+	But the main difference is abstract class contains a default constructor where the instatnce variables can be initialized.
+	Where as in the interface we don't have default constructor, what ever variables we declare within the interface are "public static final" varibles so they should be initialized at the time declaration only.
+	
+60. What is Lamda Expression? How can we work on it?

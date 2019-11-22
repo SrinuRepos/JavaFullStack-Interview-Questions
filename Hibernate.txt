@@ -3,7 +3,9 @@
 3. How to enable 2nd level cache in hibernate?
 4. Explain about persistence class object states?
 5. Rules to follow to implement Persistence class?
-6. What is dirty object ?
+6. What is dirty checking in Hibernate?
+	When the object is in sychronization state, for every modification in the object Hibernate won't submit the query, when we do either flush() or trasaction.commit() at that time it takes the latest updates in the object then submit query to the database. This is called dirty checking hibernate.
+
 7. What is diff between get(Class,Serilizable) and load(Class,Serilizable) methods ?
 8. What is synchronization in hibernate , how it works?
 9. How to work with Transaction-Management in Hinernate?
