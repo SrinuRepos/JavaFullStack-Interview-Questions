@@ -1,0 +1,101 @@
+1. Angular Architecture?
+
+In Angular there are four basic components.
+	1. Module
+	2. Components
+	3. Services 
+	4. Routing
+
+Module is collection of components, if the application is very huge we can devide into multiple modules. All the modules will be registered with APP Module . App Module is the base module in angular. Angular boostrap the app.component, from here application execution starts.
+
+Componets :-
+********
+	Angular component maps to the html page, in general for every page we will implement one component, we can make two way binding between component and html page. All the presentation logic can be associated between html page and the component. 
+
+	Component can be mapped with "selector" tag which can be used to link betwenn one html to another html.
+
+	Componets takes services classes as dependency to get the response data from microservice or to submit data to microservices.
+
+Services :-
+********
+		Services are the model classes for angular. They actually submit restful calls to the microservies (or) restful services. Service classes are singleton object in nature. For every module Angular creates only one Service object. We can associate the service with the module using "providerIn" attribute.
+
+	HttpClient can be used make restful api calls from angular. HttpClient always returns observable response so that asynchronus calls can be maintained.
+
+Routing:
+*******
+		Rounting we implement as a seperate module. We map every path with the component.Routing module should be registered with the App module.
+
+		With the app.component.html we will user <router-outerlet> tag where the actual componet response will be load when we click on RounterLink.
+
+
+2. What is component decorators in Angular?
+
+	component decorator makes a relationship between html and the component class. Which can be metioned using @Component annotation above the component class.
+	@Component decorator consists of four attributes
+	
+	selector: — Its html tag represent the component.
+	template or templateUrl: —  Its mapping to the html file.
+	styles: — the styles array for our specific component. We can also link external CSS by styleUrls.
+	directives: — another component directives we want to use inside our components.
+
+3. What is @NgModule?
+
+NgModule devides application into defferent layers or parts. Every application has at least one NgModule, the root module that we bootstrap to launch the application.
+
+In general by defualt AppComponent is the root module of our application that Angular creates and invokes app.component.html page.
+
+4.What are all the metadata properties of NgModule? And what are they used for?
+
+	imports => imports all the dependent modules, ex : BrowserModule,RouterModule
+	declarations=> Associate all required components with the Module.
+	bootstrap=> Which can bootstrap the app.component.html which act as a home page. Usually within app.component.html we specify <router-outlet> tag and within RouterModule we map empty path with HomePageComponet so which can be loaded directly.
+
+5. What is Template reference variables?
+
+	The input element name within html file can be called Template reference variable, which can be used to read user data.
+	<input #name palceholder="enter name">
+		
+		{{ name.value }}
+
+6. What are structural directives?
+	
+		*ngFor, *ngIf , *ngSwitch all are the structured directive.
+
+	<div *ngFor="let name of names" >
+		{{name}}
+	</div>
+
+7. What are all the types of Directives?
+
+There are three types of directives in Angular. 
+They are attribute directives, structural directives, and components.
+Structural directives: change the DOM layout by adding and removing DOM elements. For example, *ngIf and *ngFor
+**********************
+Attribute directives: change the appearance or behavior of an element. . For example, *ngStyle and *ngClass
+********************
+Components: are basically directives with a template.
+**********
+
+8.What are all the uses of a service?
+	Services are makes a calls to the microservies and takes care of request processing. 
+	Componets takes the servies as a dependencies.
+
+9. What is two way binding? How it can be implemented?
+	When we do modification in comopnent change will be reflected in html file and vice versa.
+	Can be applied using ([ngModeule]) tag.
+
+10. What is Property Binding ?
+	Can be used to pass data from parent component to child component. @Input() annotation can be used in child component.
+
+11.What is the sequence of Angular Lifecycle Hooks?
+OnChange()  -  OnInit()  -  DoCheck()  -  AfterContentInit()  -  AfterContentChecked()  -  AfterViewInit()  -  AfterViewChecked()  -  OnDestroy(). 
+
+12. What is observable and subscriber?
+	Can be used for asynchronus calls. Observalbe can be applied at service level where are componet could subscribe it.
+
+
+
+
+	
+		
