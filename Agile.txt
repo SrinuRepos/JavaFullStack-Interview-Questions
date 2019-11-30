@@ -1,0 +1,41 @@
+What is the methodology?
+	We follow Agile Methodology. We use Rally tool for agile methodology.
+
+How you get the requirements ?
+	Our product owner gets the requirements by connecting with the client. We devide requirement into multiple features then distribute them among the teams.
+
+	In a grooming session we devide feature into multiple user stories, every user story can be estimated with the points by the all team members.
+
+Sprint :-
+******
+	Sprint consists of two weeks. Before start of the Sprint (or) on the first day of the sprint there is a Spring planning, where we assing the user stories to the team members based on their capacity hours.
+
+	Once the user story has been assingned then the developer devides into multiple tasks.
+
+Daily stand up :-
+**************
+	Every day at 11 am we have daily stand up where we specify the status of our user story. We also discuss if there are any blockers.
+
+
+Demo Session:-
+************
+	At last day of the sprint we give demos to the Product Owner.
+
+
+Spilable story:-
+************* 
+	If the story is not completed with in the sprint then it will be spillable to next sprint.
+
+What is release cycle?
+	Once in a three months.
+
+Explain about deployment process ?
+	master => F1234 => us123
+
+=> We can trigger jenkins pipeline by specify?ing our github user story branch.
+   Jenkins builds the code, then generates the war deploys the war into the server.
+
+
+
+
+	
