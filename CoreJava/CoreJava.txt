@@ -1,0 +1,268 @@
+1.  What is the use of Encapsulation?
+	Bind the data and functionality togather. We should not allow user to access data directly which can be accessible only through functionality. 
+	We can declare data members as private write a setter & getter (or) accessible methods.
+	refer "Employee.java"
+
+2.  What is the diff between default and paramaterized constructor?
+	Constructor is a special type of method. Constructor name same as the class name . 
+	Constructor Does not have return type.
+	The constructor which does not have any parameters is a defult constructor.
+	The Constructor which has parameters is a parameterized constructor.
+	If we don't create any constructor within the java class, jvm automatically creates default constructor to assign default values to the instance variables of a class.
+
+	Ans:
+		Default constructor assings same values to all objects of a class.
+			refer DefaultConstructorEx.java
+		
+		Parameterized constructors can be used to pass values to the object dynamically. So that we can assign defferent values to the defferent objects. 
+		Note: When we create a parameterized constructor JVM does not create a default constructor.
+			refer ParameterizedCosntructorEx.java
+
+	
+3.  How to achive constructor overloading?
+		constructor overloading : Defining the same constructor by changing number of paratmeters or type of parameters.
+		Constructor Overloading can be achived through "this()" constructor. Calling to a this() constructor must be the first statement within the constructor.
+		refer ConstructorOverloadingEx.java
+	
+4.  What is method overloading and adv of it?
+		Redifining the same method by changing the number of paramerters (or) type of parameters.
+		Mehodoverloading increases the readability of the program.
+
+5.  What is "this" key word and how it works?
+	 	"this" is a implicit reference created by the jvm at the time of object creation. "this" always points to current class instance. Inorder to differentiate local variables & instance variables we use this keyword.
+
+6.  What is method overriding? what are rules to be followed while overriding a method?
+		=>Redefining the parent class method into the child class.
+		Rules:
+			1. Overriding method should not have weaker access specifier.
+			2. Overriding method return type,method name and the paratmeter type should be same.
+			3. If the parent class method declares a exception , child class can override a method either without declaring the exception or can declare same exception or it subclass execption but should not declare super class exception.
+		
+		refer MethodOverridingEx.java
+
+7. What is polymorphism? What is compile time & runtime pollymorphism ? which is performace orriented?
+		Single parent reference can refer any number of child objects which is called pollymorphism. 
+
+	Compiletime Pollymorphism  or Static Pollymorphism: calling to a overloaded method can be decided at compile time. 
+	Runtime Pollymorphism Or Dynamic pollymorphism : calling to a overriding method can be decided at run time. 
+	
+	Compile time pollymorphism is always performance oriented than runtime.
+		
+		refer CompileTimeAndRunTimePollymorphismEx.java
+
+8. What is diff between static and non-static variable?
+		For a non-static variable memory allocated for every object seperatly within a heap area.
+		For a static variable memory allocated only once within method area.
+		refer Nonstatic_Static_Var_Ex.java
+		
+9.  Can we override static method ?
+		We can not override a static method. 	
+		refer StaticMethod_OverridingEx.java
+
+10. What is final keyword and how we apply it?
+		final is a keyword can be applied at variable or method or class level.
+		final variable can not be modified.
+		final mehod can not be overridden.
+		final class can not be inherited.
+
+11. What is final , finally and finalize() ?
+	fot final refer question 10
+
+	  finally is a block which can be followed by either try or catch blocks. finally block will be executed all the times. Which is used for releasing the resources.
+
+	 finalize() is a method available in Object class, JVM invokes the finalize method at the time of garbage collection.
+		
+
+12. What is immutatble object ? Write program to demonstrate immutable?
+	We can not change the state of an object directly. 
+	Rules to define immutable class :
+		1. make class as final so which can not be inherited.
+		2. declare private final variables .
+		3. initialize them within a constructor.
+		4. define only getter methods no setter methods.
+		5. If the immutable class having mutable object we should return cloneable object through getter method.
+
+	refer ImmutatbleEx.java
+
+	
+13. What is super keyword and super() constructor?
+		super is a key word which always refers to parent class data members.
+		whenever child class and parent class data members are same we can differentiate with super keyword.
+
+		super() constructor added by the jvm as first statment within the derived class constructor.
+		super() constructor can be used by jvm to initialize parent class data members.
+	
+14. Write a program for Singleton object?
+
+Singleton object: Create a object only once reuse the reference more than once.
+
+		=> Declare private static final variable
+		=> initilize or create object in static block
+		=> make constructor as private
+		=> return the refernce from static factory method.
+public class Sample
+	{
+private static final Sample s ;
+
+static
+{
+	s = new Sample();
+}
+
+private Sample()
+	{
+	}
+
+public static Sample getSampleObject()
+	{
+return s;
+	}
+
+	}
+
+
+15. What is the differenct between public and protected access specifier?
+	=> public can be access any where. Within a package & outside the package.
+	=> protected members can be accesible within a package, outside the package can be accessbible only through inheritance, that too within a immidiate sub class.
+	
+16. What is the difference between abstract classes and interfaces? 
+	=> Abstract classes are fully implemented or fully unimplemented or both.
+	=> An interface can contain only abtract methods but from java 8 on ward we can provide define defination within interface using static methods and default methods.
+	=> static methods can not be overridden in the sub classes. 
+	=> default methods can be overridden, which are introduced for backword compatability.
+
+When to go for abstract & interface?
+
+		Abstract Class : Use it when there is strong is-a relation between super class and sub class and all subclass share some common behavior .
+
+Interface : It define just protocol which all subclass need to follow.
+
+	You can't achieve multiple inheritance with abstract class,but through interfaces can be possible.
+	refer MultipleInheritanceApp.java
+
+
+	
+17. What is the difference between catch and finally blocks?
+		catch block will be executed only when the exception is raised.
+		finally block will be executed all the time.
+
+18. What is checked and unchecked exceptions?
+		Checked exceptions are subclass of java.lang.Exception, all the checked exception should be handled programatically, because java compiler verifies at compile time.
+			
+		UnChecked exceptions are subclass of java.lang.RuntimeException, un-checked exections need not to be handled programatically, because java compiler verifies at run time.
+					
+		While forwarding Checked Exceptions (using throw keyword) , they shoudl declared within a method header using throws keyword where as un-checked exceptions need not to be declared.
+	
+19. What is diff between Exception and Error? Define Exception heirarchy?
+
+	Exception is raised due to programtic mistake where as Error will thrown due to unavailability of System Resources.
+	refer exception heirarchy diagram
+
+	
+20. What is use of throw and throws keywords?
+		throws keyword can be used to declare a exception within the method header.
+		throw keyword can be used to forward the exception.
+		while forwarding Checked Exceptions (using throw keyword) , they should declared be within a method header using throws keyword where as un-checked exceptions need not to be declared.
+		
+21. Write a program to define user defined exception?
+		public class InvalidDataException extends Exception
+		{
+			public InvalidDataException()
+			{
+			}
+			public InvalidDataException(String message)
+			{
+				super(message);
+			}
+		}
+
+	refer ExceptionMsgEx.java
+
+22. What is the diff between == and equals() method?
+	== compares the object references where as equals() method compares the content in the object.
+	String s1 = "Srinu";
+	String s2 = "Srinu";
+	String s3 = new String("Srinu");
+
+	s1 == s3 returns false
+	s1 == s2 return true
+	s1.equals(s3) returns true.
+
+	refer StringConstantPool diagram.
+	
+23. How to reverse the string?
+	String s = "Welcome";
+	StringBuffer sb = new StringBuffer(s);
+	sb.reverse();
+			
+24. What is StringConstantPool ? How it works?
+	refer StringConstantPool diagram.
+
+25. What is the diff beween String , StringBuffer & StringBuilder?
+		String is a immutable object. 
+		StringBuffer is mutable object but sychronized.
+		StringBuilder is mutalbe object but not sychronized.
+
+26. How many ways we can create a thread? 
+	Thred can be created in three ways.
+		1. By implementing java.lang.Runnable interface.
+		2. By Extending java.lang.Thread class.
+		3. By implementing java.lang.Callable interface.
+The java.lang.Callable threads can be used only through executor service.
+		
+27. What is difference between Thread & Runnable & Callable?
+28. What is sychronization? How can we implement?
+29. What is volatile?
+30. What is use of automic data types?
+31. What is Executor Service? what is the use of it?
+32. What is the use of wait() and notify() methods?
+33. Can we call wait() method outside the sychronized block?
+34. Write a Producer and Consumer program?
+35. What is diff between sleep() and wait() method ?
+36. What is deadlock? write a program to create a deadlock?
+37. Expaling about thread life cycle?
+38. What is serilization ? How to implement it?
+39. What is transient keyword? what is the use of it?
+40. What is cloning and how to implement in java?
+41. What is annonymous inner class?
+42. Explaing about ArrayList and LinkedList ? what is the difference between them?
+43. For accessing elements which is faster ArrayList or LinkedList?
+44. How HashMap works ?
+45. How Hashtable works?
+46. Explain about Set data structure?
+47. Explain about Map data structure?
+48. What is the difference between HashMap and ConcurrentHashMap?
+49. What is the difference between HashMap and HashTable?
+50. How to sort the user defined objects in LinkedList or ArrayList?
+51. What is hashing ? what is hash collision? how to overcome it?
+52. Explain about JVM architecture?
+53. What is Garbage Collection? How it works in java?
+54. What is the contract between hascode() and equals() method?
+	The contract between equals() and hashCode() is:
+	 1) If two objects are equal, then they must have the same hash code. 
+         2) If two objects have the same hash code, they may or may not be equal. ...
+         The default implementation of hashCode() in Object class returns distinct integers for different objects.
+
+55. Why we need to override hascode() and equals() method?
+56. What is functional interface? and what is use of it?
+57. what is default method ?
+	https://www.javatpoint.com/java-default-methods
+
+58. What is streaming API? How it works?
+	=> Stream API is functional in nature.
+	=> Stream api does not store data, it just copy the resulted data from one source to another source.
+	=> Stream api does not modify the actual source(list,set,map etc).When we apply operations on source data, the stream 	   api just copies the resulted data into another source.
+	=> Stream is lazy and evaluates code only when required.
+	=>The elements of a stream are only visited once during the life of a stream. Like an Iterator, a new stream must be 	  generated to revisit the same elements of the source.
+
+59. What is the diff between abstract class and interface?
+	From java8 onwards we can declare default methods and static methods within a interface.
+	From interface the default methods can be overriden in the child classes where are static methods con't be overriden.
+	From java8 onwards interface is exposes the similar functionalities of abstract class.
+
+	But the main difference is abstract class contains a default constructor where the instatnce variables can be initialized.
+	Where as in the interface we don't have default constructor, what ever variables we declare within the interface are "public static final" varibles so they should be initialized at the time declaration only.
+	
+60. What is Lamda Expression? How can we work on it?
+
+61. What are cloning types in java?
