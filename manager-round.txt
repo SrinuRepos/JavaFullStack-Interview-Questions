@@ -1,0 +1,43 @@
+1. Tell me about your project?
+
+	
+2. What are your roles and resposibilities?
+
+3. What is the methodology used in your project?
+
+4. What are challenges faced in your project? Or What is the latest bug which you fixed?
+	As we use Twitter batch job for auto listening the twitter account. Twitter API throws RateLimit Exception after some point of time. Which leads to failure of loading lateste tweets into Intelligent System DB. 
+	
+	To fix it, case 1 : For every 15 minutes we pause the get tweets api call for about 1 minute then after we resume. 
+		   case 2 : For safe side we handle RateLimit Exception and within catch we pause the api call for about 1 minute then after we resume. 
+
+5. Why are you looking for change?
+
+6. Why do you have gap ?
+		Due to family urgence i stayed with family.
+
+7. What is the deployment cycle to be followed?
+
+		
+8. How much rating you give yourself on Technology? (Java/Spring/Hibernate/Spring Boot/MicroServices)
+
+9. What is the use of Spring Boot?
+
+10. What are the advantages of MicroServices?
+
+11. How do you test your application after your code changes ?
+
+	We creae userstory branch under feature branch. We develop the code in user story branch and tested in local. once it is successful then push the changes user story branch. We deploy the user story branch into dev server using jenkins pipe line.
+
+	
+	Jenkins pipe line does the following jobs.
+
+		=> Build the code on specifies branch.
+		=> Create a war then deploy into Dev Enviroment Server.
+
+
+
+
+
+
+
